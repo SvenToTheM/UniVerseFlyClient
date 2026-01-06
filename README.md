@@ -1,0 +1,73 @@
+# UniVerseFlyClient
+
+A high-performance, standalone client wrapper for **Flyff Universe**, built with **.NET 8 (WPF)** and **WebView2**.
+
+## 🚀 Features
+
+- **Performance Optimized**: Configured with specific WebView2 arguments to disable background throttling and enable high-performance modes.
+- **Clean Architecture**: Built using **Hexagonal Architecture** (Ports & Adapters) to ensure maintainability and testability.
+- **Customizable**: Settings for window size, window mode, and target URL (configurable via `settings.json`).
+- **Modern Stack**: C#, WPF, WebView2.
+- **Toggle Fullscreen**: Integrated hotkey support for seamless switching between modes.
+
+## 🏗️ Architecture
+
+The solution follows a strict separation of concerns:
+
+- **UniVerseFlyClient.Domain**: Core entities and port interfaces. (No dependencies)
+- **UniVerseFlyClient.Application**: Business logic and use cases. (Depends on Domain)
+- **UniVerseFlyClient.Infrastructure**: Adapters for external concerns like File I/O. (Depends on Application & Domain)
+- **UniVerseFlyClient.UI**: The WPF Presentation layer. (Depends on all layers via Composition Root)
+
+## 🛠️ Getting Started
+
+### Prerequisites
+
+- .NET 8 SDK
+- WebView2 Runtime (Edge)
+
+### Build & Run
+
+1. Clone the repository.
+2. Build the solution:
+   ```bash
+   dotnet build
+   ```
+3. Run the UI project:
+   ```bash
+   dotnet run --project src/UniVerseFlyClient.UI/UniVerseFlyClient.UI.csproj
+   ```
+
+## ⚙️ Configuration
+
+A `settings.json` file will be created in the application directory on first run. You can modify it to change:
+
+- `WindowWidth` / `WindowHeight`
+- `Mode` (`Windowed`, `Fullscreen`, `WindowedFullscreen`)
+- `TargetUrl` (Default: `https://universe.flyff.com/play`)
+- `DisableBackgroundThrottling`
+
+### CLI Arguments
+
+You can override the window mode via command line arguments:
+
+- `--window windowed`: Start in windowed mode.
+- `--window fullscreen`: Start in exclusive fullscreen mode.
+- `--window windowed-fullscreen`: Start in borderless windowed fullscreen (Default).
+
+Example:
+```bash
+UniVerseFlyClient.exe --window windowed
+```
+
+## ⌨️ Hotkeys
+
+- **F11**: Toggles between Fullscreen/Windowed-Fullscreen and Windowed mode.
+
+## 🤝 Contribution
+
+Contributions are welcome! Please ensure you follow the existing Hexagonal Architecture pattern.
+
+## 📄 License
+
+MIT License
