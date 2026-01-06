@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="src/UniVerseFlyClient.UI/Assets/app_icon.png" width="128" height="128" alt="UniVerse Fly Client Icon">
+</p>
+
 # UniVerseFlyClient
 
 > [!IMPORTANT]
