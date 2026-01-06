@@ -28,7 +28,7 @@ jobs:
       run: dotnet build --no-restore --configuration Release
 
     - name: Publish
-      run: dotnet publish src/UniVerseFlyClient.UI/UniVerseFlyClient.UI.csproj -c Release -r win-x64 --self-contained true -o ./publish
+      run: dotnet publish src/UniVerseFlyClient.UI/UniVerseFlyClient.UI.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -o ./publish
 
     - name: Zip Release Artifacts
       shell: pwsh
