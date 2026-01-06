@@ -28,7 +28,19 @@ jobs:
       run: dotnet build --no-restore --configuration Release
 
     - name: Publish
-      run: dotnet publish src/UniVerseFlyClient.UI/UniVerseFlyClient.UI.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -o ./publish
+      run: |
+        dotnet publish src/UniVerseFlyClient.UI/UniVerseFlyClient.UI.csproj `
+          -c Release `
+          -r win-x64 `
+          --self-contained true `
+          -p:PublishSingleFile=true `
+          -p:IncludeNativeLibrariesForSelfExtract=true `
+          -p:DebugType=None `
+          -p:DebugSymbols=false `
+          -p:PublishReadyToRun=true `
+          -p:EnableCompressionInSingleFile=true `
+          -o ./publish
+        Get-ChildItem -Path ./publish -Include *.xml,*.pdb -Recurse | Remove-Item -Force
 
     - name: Zip Release Artifacts
       shell: pwsh
