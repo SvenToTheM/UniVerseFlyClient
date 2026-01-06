@@ -8,7 +8,8 @@
         mc:Ignorable="d"
         Title="Flyff Universe Client" Height="720" Width="1280"
         WindowStartupLocation="CenterScreen"
-        Background="Black">
+        Background="Black"
+        Icon="Assets/app_icon.png">
     <Grid>
         <wv2:WebView2 Name="MainWebView" />
     </Grid>
