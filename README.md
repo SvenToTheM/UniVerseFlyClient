@@ -1,6 +1,6 @@
 # UniVerseFlyClient
 
-A high-performance, standalone client wrapper for **Flyff Universe**, built with **.NET 8 (WPF)** and **WebView2**.
+A high-performance, standalone client wrapper for **Flyff Universe**, built with **.NET 10 (WPF)** and **WebView2**.
 
 ## 🚀 Features
 
@@ -23,7 +23,7 @@ The solution follows a strict separation of concerns:
 
 ### Prerequisites
 
-- .NET 8 SDK
+- .NET 10 SDK
 - WebView2 Runtime (Edge)
 
 ### Build & Run
@@ -59,6 +59,10 @@ Example:
 ```bash
 UniVerseFlyClient.exe --window windowed
 ```
+
+## 📦 Releases
+
+Automated releases are created whenever a new tag (e.g., `v1.0.0`) is pushed to the repository. The release includes a pre-compiled standalone executable for Windows (win-x64).
 
 ## ⌨️ Hotkeys
 
