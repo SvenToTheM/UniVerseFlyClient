@@ -1,8 +1,8 @@
-<p align="center">
-  <img src="src/UniVerseFlyClient.UI/Assets/app_icon.png" width="512" height="512" alt="UniVerse Fly Client Icon">
-</p>
-
 # UniVerseFlyClient
+
+<p align="center">
+  <img src="src/UniVerseFlyClient.UI/Assets/app_icon.png" width="256" height="256" alt="UniVerse Fly Client Icon">
+</p>
 
 > [!IMPORTANT]
 > **Disclaimer:** This is an unofficial fan project. Flyff Universe is a trademark of Gala Lab / PlayWorks. This software is not affiliated with, maintained by, or endorsed by the official developers. Use at your own risk.
