@@ -1,5 +1,8 @@
 # UniVerseFlyClient
 
+> [!IMPORTANT]
+> **Disclaimer:** This is an unofficial fan project. Flyff Universe is a trademark of Gala Lab / PlayWorks. This software is not affiliated with, maintained by, or endorsed by the official developers. Use at your own risk.
+
 A high-performance, standalone client wrapper for **Flyff Universe**, built with **.NET 10 (WPF)** and **WebView2**.
 
 ## 🚀 Features
